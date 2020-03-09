@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>crook</title>
     <style media="screen">
     #slideholder1 {
       height: 300px;
@@ -29,6 +29,8 @@
     <p></p>
     <div id="slideholder3">
     </div>
+    <p></p>
+    <h6> i think it suspect number 3. he seems a bit creepy.</h6>
     <script>
       var picture = [1,2,3,4,5,6,7,8,9];
       var slideholder = document.getElementById("slideholder")
@@ -38,6 +40,7 @@
       slideholder1.style.backgroundImage = "url('img/top1.jpg')"
       slideholder2.style.backgroundImage = "url('img/middle1.jpg')"
       slideholder3.style.backgroundImage = "url('img/bottom1.jpg')"
+      
 
       slideholder1.addEventListener("click", function() {
         slideholder1.style.backgroundImage = "url('img/top"+getpicture1()+".jpg')"
