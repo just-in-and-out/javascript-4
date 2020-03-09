@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>imageslider</title>
+    <style>
+      #slideholder {
+        height: 300px;
+        width: 300px;
+        border: 3px black solid;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html">4.1</a>
+    <a href="page 3.html">4.3</a>
+    <p></p>
+    <div id="slideholder">
+    </div>
+    <script>
+      var picture = [1,2,3,4,5,6,7,8,9];
+      var slideholder = document.getElementById("slideholder")
+      var i = 1
+      slideholder.style.backgroundImage = "url('img/image1.jpg')"
+
+      slideholder.addEventListener("click", function() {
+        slideholder.style.backgroundImage = "url('img/image"+getpicture()+".jpg')"
+      });
+      function getpicture(){
+        if (i >= picture.length){
+          i = 0;
+        }
+        i++;
+        console.log(i);
+        return i;
+      }
+    </script>
+  </body>
+</html>

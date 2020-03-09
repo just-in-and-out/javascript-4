@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    #slideholder1 {
+      height: 300px;
+      width: 900px;
+    }
+    #slideholder2 {
+      height: 300px;
+      width: 900px;
+    }
+    #slideholder3 {
+      height: 300px;
+      width: 900px;
+    }
+    </style>
+  </head>
+  <body>
+    <a href="page 2.html">4.2</a>
+    <p></p>
+    <div id="slideholder1">
+    </div>
+    <p></p>
+    <div id="slideholder2">
+    </div>
+    <p></p>
+    <div id="slideholder3">
+    </div>
+    <script>
+      var picture = [1,2,3,4,5,6,7,8,9];
+      var slideholder = document.getElementById("slideholder")
+      var x = 1
+      var y = 1
+      var z = 1
+      slideholder1.style.backgroundImage = "url('img/top1.jpg')"
+      slideholder2.style.backgroundImage = "url('img/middle1.jpg')"
+      slideholder3.style.backgroundImage = "url('img/bottom1.jpg')"
+
+      slideholder1.addEventListener("click", function() {
+        slideholder1.style.backgroundImage = "url('img/top"+getpicture1()+".jpg')"
+      });
+      function getpicture1(){
+        if (x >= 3){
+          x = 0;
+        }
+        x++;
+        return x;
+      }
+      slideholder2.addEventListener("click", function() {
+        slideholder2.style.backgroundImage = "url('img/middle"+getpicture2()+".jpg')"
+      });
+      function getpicture2(){
+        if (y >= 3){
+          y = 0;
+        }
+        y++;
+        return y;
+      }
+      slideholder3.addEventListener("click", function() {
+        slideholder3.style.backgroundImage = "url('img/bottom"+getpicture3()+".jpg')"
+      });
+      function getpicture3(){
+        if (z >= 3){
+          z = 0;
+        }
+        z++;
+        return z;
+      }
+    </script>
+  </body>
+</html>
